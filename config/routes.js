@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 
-
+routes.use(express.json())
 
 let db = [
     { '1': { Nome: 'Cliente 1', Idade: '20' } },
@@ -15,6 +15,11 @@ return res.json(db);
 });
 
 // inserir dados
+routes.post('/cadastrar', async (req , res) =>{
+  console.log(req.body);
+  res.send('pagina inicial cadastrar');
+})
+
 routes.post('/add', (req, res)=>{
 const body = req.body
 if(!body)
