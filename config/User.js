@@ -17,9 +17,21 @@ const user = db.define('users' , {
         type: Sequelize.STRING,
         allowNull: false
     },
+    senha:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     saldo:{
         type: Sequelize.STRING,
         allowNull: false
+    },
+    historico:{
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    favoritos:{
+        type: Sequelize.STRING,
+        allowNull: true
     }
 });
 

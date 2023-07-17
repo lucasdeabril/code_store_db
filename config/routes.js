@@ -43,6 +43,21 @@ routes.post('/add', (req, res)=>{
     db.push(body)
     return res.json(body)
 })
+
+
+routes.put('/edit', (req, res) =>{
+  const {id , name} = req.body;
+  User.update(
+    {name: name},
+    {where: {id:id}}
+  )
+  .then(()=>{
+    res.json({success:true, message:'Elemento atualizado com sucesso'})
+  })
+  .catch((error)=>{
+    res.status(500).json({sucess:false, message:'Elemento não atualizado' })
+  })
+})
   
 
 module.exports = routes
