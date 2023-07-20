@@ -4,7 +4,7 @@
   "description": "primeira api criada, banco de dados centralizado.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Lucas passos",
   "license": "ISC",
