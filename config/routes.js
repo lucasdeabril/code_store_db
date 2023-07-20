@@ -46,10 +46,10 @@ routes.post('/add', (req, res)=>{
 
 
 routes.put('/edit', (req, res) =>{
-  const {id , name} = req.body;
+  const {name , saldo} = req.body;
   User.update(
-    {name: name},
-    {where: {id:id}}
+    {saldo: saldo},
+    {where: {name:name}}
   )
   .then(()=>{
     res.json({success:true, message:'Elemento atualizado com sucesso'})
