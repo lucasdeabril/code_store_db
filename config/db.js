@@ -1,16 +1,16 @@
 const Sequelize = require('sequelize')
 
-const sequelize = new Sequelize( 'principal' , 'root' , 'l08p04s2000' , {
-    host: 'localhost' ,
-    dialect: 'mysql'
-});
+// const sequelize = new Sequelize( 'principal' , 'root' , 'l08p04s2000' , {
+//     host: 'localhost' ,
+//     dialect: 'mysql'
+// });
 
-sequelize.authenticate()
-.then(() => {
-    console.log('Conexão bem sucedida')
-}).catch(() => {
-    console.log("ERRO");
-});
+// sequelize.authenticate()
+// .then(() => {
+//     console.log('Conexão bem sucedida')
+// }).catch(() => {
+//     console.log("ERRO");
+// });
 
 // sequelize.query("UPDATE users SET name = 'lucas_novo' WHERE id = 1")
 //   .then(([result, metadata]) => {
