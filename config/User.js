@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize')
 const db = require('./db')
+//db.define('users' ,
 
-const user = db.define('users' , {
+const user =  {
     
     id: {
         type: Sequelize.INTEGER,
@@ -33,7 +34,7 @@ const user = db.define('users' , {
         type: Sequelize.STRING,
         allowNull: true
     }
-});
+};
 
 user.sync();
 
